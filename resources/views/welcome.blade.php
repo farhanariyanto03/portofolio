@@ -7,25 +7,51 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 
 <body>
     {{-- NAVBAR --}}
     <nav class="bg-black fixed top-0 left-0 w-full z-50 shadow-md">
-        <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
-            <h1 class="text-white">Farhanayantoo</h1>
-            <div class="space-x-5">
-                <a href="#" class="text-white">Home</a>
-                <a href="#" class="text-gray-400">Experience</a>
-                <a href="#" class="text-gray-400">Contact</a>
+        <div class="max-w-7xl mx-auto flex items-center justify-between h-20 px-6">
+            <h1 class="text-white text-lg font-semibold">Farhanayantoo</h1>
+
+            <!-- Menu (Hidden di Mobile) -->
+            <div class="hidden md:flex space-x-5">
+                <a href="#" class="nav-link active text-white">Home</a>
+                <a href="#" class="nav-link text-white">Experience</a>
+                <a href="#" class="nav-link text-white">Portfolio</a>
             </div>
-            <div>
+
+            <!-- Button -->
+            <div class="hidden md:block">
                 <a href="#"
                     class="text-white bg-gradient-to-r from-blue-600 to-purple-700 px-4 py-2 rounded-full">
                     Discuss For Project
                 </a>
             </div>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden flex flex-col bg-black text-white py-4 px-6 space-y-4 shadow-md">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">Experience</a>
+            <a href="#" class="nav-link">Portfolio</a>
+            <a href="#" class="text-center bg-gradient-to-r from-blue-600 to-purple-700 px-4 py-2 rounded-full">
+                Discuss For Project
+            </a>
         </div>
     </nav>
 
@@ -109,132 +135,145 @@
 
     </section>
 
-    {{-- SECTION EXPERIENCE --}}
+    {{-- EXPERIENCE SECTION --}}
     <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
-        <!-- Efek Blur & Gradient Background -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-30 blur-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl"></div>
 
-        <!-- Judul Section -->
         <div class="relative max-w-5xl mx-auto text-center z-10">
             <h1
-                class="text-6xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
+                class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300 animate-fade-in">
                 Experience
             </h1>
         </div>
 
-        <!-- Timeline Pengalaman Kerja -->
-        <div class="relative max-w-4xl w-full mt-16 px-6">
-            <div class="relative border-l-4 border-teal-500 pl-8 space-y-10">
-                <!-- Timeline 1 -->
-                <div class="relative group">
-                    <div class="absolute -left-11.5 w-6 h-6 bg-teal-500 rounded-full border-4 border-black"></div>
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-md transform transition-all duration-300 group-hover:scale-105">
-                        <h3 class="text-xl font-semibold text-blue-400">Frontend Developer</h3>
-                        <p class="text-gray-400">PT. Tech Solution (2022 - Sekarang)</p>
-                        <p class="mt-2 text-gray-300 text-sm">
-                            Membangun **UI/UX modern** menggunakan <span class="text-teal-400 font-semibold">Tailwind
-                                CSS & Vue.js</span> untuk aplikasi web berbasis SaaS.
-                        </p>
-                    </div>
-                </div>
+        <div class="relative max-w-4xl w-full mt-12">
+            <div class="flex justify-center mb-6 space-x-4">
+                <button
+                    class="tab-button px-6 py-3 text-white bg-teal-600 rounded-lg transition duration-300 hover:bg-gray-600"
+                    data-tab="experience">
+                    Experience
+                </button>
+                <button
+                    class="tab-button px-6 py-3 text-white bg-gray-700 rounded-lg transition duration-300 hover:bg-gray-600"
+                    data-tab="techstack">
+                    Tech Stack
+                </button>
+            </div>
 
-                <!-- Timeline 2 -->
-                <div class="relative group">
-                    <div class="absolute -left-11.5 w-6 h-6 bg-teal-500 rounded-full border-4 border-black"></div>
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-md transform transition-all duration-300 group-hover:scale-105">
-                        <h3 class="text-xl font-semibold text-blue-400">Backend Developer</h3>
-                        <p class="text-gray-400">Freelance (2020 - 2022)</p>
-                        <p class="mt-2 text-gray-300 text-sm">
-                            Mengembangkan **REST API** menggunakan <span class="text-teal-400 font-semibold">Laravel &
-                                MySQL</span> untuk startup teknologi dan e-commerce.
-                        </p>
-                    </div>
-                </div>
+            <!-- Tab Content Experience -->
+            <div id="experience" class="tab-content p-8 text-white">
+                <div class="relative max-w-4xl w-full px-6">
+                    <div class="relative border-l-4 border-teal-500 pl-8 space-y-10">
+                        <!-- Experience Item -->
+                        <div class="relative group">
+                            <div
+                                class="absolute -left-11.5 w-6 h-6 bg-teal-500 rounded-full border-4 border-white group-hover:animate-ping">
+                            </div>
+                            <div
+                                class="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-teal-500/50 group-hover:bg-gray-700">
+                                <h3 class="text-xl font-semibold text-blue-400 group-hover:text-teal-400">Web Developer
+                                </h3>
+                                <p class="text-gray-400 group-hover:text-gray-200">JTI Inovation (2024 - Now)</p>
+                                <p class="mt-2 text-gray-300 text-sm group-hover:text-gray-100">
+                                    Membangun website E-Learning untuk sebuah kampus sebagai media pembelajaran
+                                </p>
+                            </div>
+                        </div>
 
-                <!-- Timeline 3 -->
-                <div class="relative group">
-                    <div class="absolute -left-11.5 w-6 h-6 bg-teal-500 rounded-full border-4 border-black"></div>
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-md transform transition-all duration-300 group-hover:scale-105">
-                        <h3 class="text-xl font-semibold text-blue-400">Web Developer Intern</h3>
-                        <p class="text-gray-400">XYZ Company (2019 - 2020)</p>
-                        <p class="mt-2 text-gray-300 text-sm">
-                            Berpartisipasi dalam pengembangan website perusahaan menggunakan <span
-                                class="text-teal-400 font-semibold">HTML, CSS, JavaScript</span>.
-                        </p>
+                        <div class="relative group">
+                            <div
+                                class="absolute -left-11.5 w-6 h-6 bg-teal-500 rounded-full border-4 border-white group-hover:animate-ping">
+                            </div>
+                            <div
+                                class="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-teal-500/50 group-hover:bg-gray-700">
+                                <h3 class="text-xl font-semibold text-blue-400 group-hover:text-teal-400">Fullstack
+                                    Developer</h3>
+                                <p class="text-gray-400 group-hover:text-gray-200">Upylon/Proform (2024 - Now)</p>
+                                <p class="mt-2 text-gray-300 text-sm group-hover:text-gray-100">
+                                    Mengembangkan website dengan beberapa klient dengan tim yang berpengalaman
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div
+                                class="absolute -left-11.5 w-6 h-6 bg-teal-500 rounded-full border-4 border-white group-hover:animate-ping">
+                            </div>
+                            <div
+                                class="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-teal-500/50 group-hover:bg-gray-700">
+                                <h3 class="text-xl font-semibold text-blue-400 group-hover:text-teal-400">Web Developer
+                                    Intern</h3>
+                                <p class="text-gray-400 group-hover:text-gray-200">CV. Hummasoft Technology (2021)</p>
+                                <p class="mt-2 text-gray-300 text-sm group-hover:text-gray-100">
+                                    Membangun website untuk sebuah sekolah yang menyediakan sistem Donasi Siswa(DOSIS)
+                                    untuk sedang terkena bencana
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tech Stack Section -->
-        <div class="relative max-w-4xl w-full mt-24 px-6">
-            <h2 class="text-3xl font-bold text-white text-center mb-8">Tech Stack</h2>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <!-- Tech Item 1 -->
-                <div class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                        alt="HTML5" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">HTML5</p>
-                </div>
-
-                <!-- Tech Item 2 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                        alt="CSS3" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">CSS3</p>
-                </div>
-
-                <!-- Tech Item 3 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                        alt="JavaScript" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">JavaScript</p>
-                </div>
-
-                <!-- Tech Item 4 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                        alt="Tailwind CSS" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">Tailwind CSS</p>
-                </div>
-
-                <!-- Tech Item 5 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                        alt="Vue.js" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">Vue.js</p>
-                </div>
-
-                <!-- Tech Item 6 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
-                        alt="Laravel" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">Laravel</p>
-                </div>
-
-                <!-- Tech Item 7 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                        alt="MySQL" class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">MySQL</p>
-                </div>
-
-                <!-- Tech Item 8 -->
-                <div
-                    class="p-6 bg-gray-800 rounded-lg shadow-md transform transition-all duration-300 hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
-                        class="w-16 h-16 mx-auto">
-                    <p class="mt-2 text-white font-semibold">Git</p>
+            <!-- Tab Content Tech Stack -->
+            <div id="techstack" class="tab-content hidden p-8 text-white">
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center mt-6">
+                    <div class="tech-card">
+                        <i class="devicon-html5-plain-wordmark colored text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">HTML5</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-css3-plain-wordmark colored text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">CSS3</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-javascript-plain colored text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">JavaScript</p>
+                    </div>
+                    <div class="tech-card">
+                        <img class="w-20 md:w-24 lg:w-28 mx-auto"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">React</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-tailwindcss-original colored text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">Tailwind CSS</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-laravel-original colored text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">Laravel</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-nodejs-plain-wordmark colored text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">NodeJS</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-express-original-wordmark text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">Express</p>
+                    </div>
+                    <div class="tech-card">
+                        <img class="w-20 md:w-24 lg:w-28 mx-auto"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">Python</p>
+                    </div>
+                    <div class="tech-card">
+                        <img class="w-20 md:w-24 lg:w-28 mx-auto"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">MySQL</p>
+                    </div>
+                    <div class="tech-card">
+                        <img class="w-20 md:w-24 lg:w-28 mx-auto"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">PostgreSQL</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="devicon-prisma-original text-6xl md:text-7xl lg:text-8xl"></i>
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">Prisma</p>
+                    </div>
+                    <div class="tech-card">
+                        <img class="w-20 md:w-24 lg:w-28 mx-auto"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+                        <p class="mt-2 text-sm md:text-base lg:text-lg">Git</p>
+                    </div>
                 </div>
             </div>
         </div>

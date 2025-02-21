@@ -131,3 +131,31 @@
         scroll-margin-top: 100px;
     }
 }
+
+.nav-link {
+    @apply text-gray-400 hover:text-white transition duration-300;
+}
+
+.active {
+    @apply text-white;
+}
+
+.tech-card {
+    @apply border border-white rounded-lg p-8 transition transform cursor-pointer shadow-md;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.tech-card:hover {
+    @apply scale-110 shadow-xl;
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.8), rgba(16, 185, 129, 0.8));
+    color: white;
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.tech-card:hover i,
+.tech-card:hover img {
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease-in-out;
+}
