@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
@@ -37,15 +38,13 @@
             <button id="menu-btn" class="md:hidden text-white focus:outline-none">
                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16m-7 6h7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden md:hidden flex flex-col bg-black text-white py-4 px-6 space-y-4 shadow-md">
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-black text-white py-4 px-6 space-y-4 shadow-md">
             <a href="#" class="nav-link active">Home</a>
             <a href="#" class="nav-link">Experience</a>
             <a href="#" class="nav-link">Portfolio</a>
@@ -56,7 +55,7 @@
     </nav>
 
     {{-- HOME SECTION --}}
-    <section class="relative bg-black min-h-screen flex items-center justify-center">
+    <section class="relative bg-black min-h-screen flex items-center justify-center overflow-hidden">
         <!-- SVG Background -->
         <div class="absolute inset-0 flex justify-center items-center overflow-hidden">
             <svg width="880" height="293" viewBox="0 0 880 293" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -75,69 +74,87 @@
         </div>
 
         <!-- Kotak Konten -->
-        <div class="relative bg-gray-900 p-10 rounded-2xl shadow-2xl max-w-7xl w-full z-10">
+        <div class="relative bg-gray-900 p-10 rounded-2xl shadow-2xl max-w-7xl w-full z-10 opacity-0 scale-90 home-box">
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <!-- Teks -->
-                <div class="md:w-1/2 text-center md:text-left">
+                <div class="md:w-1/2 text-center md:text-left opacity-0 translate-y-10 home-text">
                     <h1 class="text-4xl md:text-5xl text-gray-300 font-extrabold mb-4">Fullstack Developer</h1>
                     <div class="border border-blue-600 bg-blue-600 h-1 w-32 rounded-full mb-6"></div>
-                    <h4 class="text-2xl md:text-3xl font-bold text-gray-300">Hello,
-                        <span class="text-blue-500">I'm</span>
-                    </h4>
+                    <h4 class="text-2xl md:text-3xl font-bold text-gray-300">Hello, <span
+                            class="text-blue-500">I'm</span></h4>
                     <h2
                         class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
-                        Farhan Ariyanto
-                    </h2>
-                    <p class="text-gray-400 leading-relaxed">
-                        Saya adalah individu yang merancang, mengembangkan, dan memelihara perangkat lunak untuk
+                        Farhan Ariyanto</h2>
+                    <p class="text-gray-400 leading-relaxed">Saya adalah individu yang merancang, mengembangkan, dan
+                        memelihara perangkat lunak untuk
                         memenuhi berbagai kebutuhan pengguna. Saya tidak hanya menulis kode, tetapi juga memecahkan
-                        masalah, mengoptimalkan kinerja aplikasi, serta berkolaborasi dengan tim untuk menciptakan
-                        solusi inovatif.
-                    </p>
+                        masalah, mengoptimalkan kinerja aplikasi,
+                        serta berkolaborasi dengan tim untuk menciptakan solusi inovatif.</p>
                     <div class="flex space-x-4 mt-6">
                         <button
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg transition duration-300">
-                            Discuss for Projects
-                        </button>
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg transition duration-300 scale-btn">Discuss
+                            for Projects</button>
                         <button
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg transition duration-300">
-                            View Portfolios
-                        </button>
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg transition duration-300 scale-btn">View
+                            Portfolios</button>
                     </div>
                     <div class="flex space-x-4 mt-6">
                         <button
-                            class="text-white px-6 py-3 rounded-lg border border-gray-600 hover:border-blue-600 hover:text-blue-400 transition duration-300">
-                            <i class="ri-instagram-line"></i>
-                        </button>
+                            class="text-white px-6 py-3 rounded-lg border border-gray-600 hover:border-blue-600 hover:text-blue-400 transition duration-300 scale-btn"><i
+                                class="ri-instagram-line"></i></button>
                         <button
-                            class="text-white px-6 py-3 rounded-lg border border-gray-600 hover:border-blue-600 hover:text-blue-400 transition duration-300">
-                            <i class="ri-github-fill"></i>
-                        </button>
+                            class="text-white px-6 py-3 rounded-lg border border-gray-600 hover:border-blue-600 hover:text-blue-400 transition duration-300 scale-btn"><i
+                                class="ri-github-fill"></i></button>
                         <button
-                            class="text-white px-6 py-3 rounded-lg border border-gray-600 hover:border-blue-600 hover:text-blue-400 transition duration-300">
-                            <i class="ri-linkedin-fill"></i>
-                        </button>
+                            class="text-white px-6 py-3 rounded-lg border border-gray-600 hover:border-blue-600 hover:text-blue-400 transition duration-300 scale-btn"><i
+                                class="ri-linkedin-fill"></i></button>
                     </div>
                 </div>
 
                 <!-- Gambar -->
-                <div class="md:w-1/2 flex justify-center">
+                <div class="md:w-1/2 flex justify-center opacity-0 translate-y-10 home-image">
                     <div class="relative">
                         <img alt="Portrait of a developer"
-                            class="rounded-2xl shadow-lg transform hover:scale-105 transition duration-300"
+                            class="rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"
                             height="300" width="300"
                             src="https://storage.googleapis.com/a1aa/image/auxEusAbPV0O9eEIXjMtDzOqaPaGCkRRZGDtC_Xs46s.jpg" />
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
 
     {{-- EXPERIENCE SECTION --}}
     <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl"></div>
+        <!-- SVG Background -->
+        <svg width="880" height="293" viewBox="0 0 880 293" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute top-2/3 transform -translate-x-1/2 opacity-70">
+            <path
+                d="M0.805929 2.78512C0.805929 2.78512 136.279 93.7469 247.217 118.296C381.692 148.055 439.576 76.4933 575.08 101.246C704.275 124.846 871.031 225.251 871.031 225.251M3.07121 24.6061C3.07121 24.6061 138.544 115.568 249.482 140.118C383.957 169.876 441.841 98.3144 577.346 123.067C706.54 146.667 873.297 247.072 873.297 247.072"
+                stroke="url(#paint0_linear_6_337)" stroke-opacity="0.12" stroke-width="5" />
+            <defs>
+                <linearGradient id="paint0_linear_6_337" x1="3.94211" y1="103.949" x2="887.548"
+                    y2="191.726" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.394097" stop-color="#0D6597" />
+                    <stop offset="0.670139" stop-color="#196E81" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg width="880" height="293" viewBox="0 0 880 293" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-2/6 top-2/3 transform -translate-x-1/2 opacity-70">
+            <path
+                d="M0.805929 2.78512C0.805929 2.78512 136.279 93.7469 247.217 118.296C381.692 148.055 439.576 76.4933 575.08 101.246C704.275 124.846 871.031 225.251 871.031 225.251M3.07121 24.6061C3.07121 24.6061 138.544 115.568 249.482 140.118C383.957 169.876 441.841 98.3144 577.346 123.067C706.54 146.667 873.297 247.072 873.297 247.072"
+                stroke="url(#paint0_linear_6_337)" stroke-opacity="0.12" stroke-width="5" />
+            <defs>
+                <linearGradient id="paint0_linear_6_337" x1="3.94211" y1="103.949" x2="887.548"
+                    y2="191.726" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.394097" stop-color="#0D6597" />
+                    <stop offset="0.670139" stop-color="#196E81" />
+                </linearGradient>
+            </defs>
+        </svg>
+        </div>
 
         <div class="relative max-w-5xl mx-auto text-center z-10">
             <h1
@@ -274,6 +291,127 @@
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
                         <p class="mt-2 text-sm md:text-base lg:text-lg">Git</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- PENGHARGAAN SECTION --}}
+    <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
+        <div class="relative max-w-6xl mx-auto text-center z-10">
+            <h1
+                class="mb-12 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300 animate-fade-in">
+                Penghargaan & Sertifikat
+            </h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3  space-y-2">
+                <!-- Sertifikat 1 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/Juara Hackathon UM.jpg') }}" alt="Sertifikat 1"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">1st Winner Governance Category - UM SDGs Hackathon
+                        National Competition 2024</h2>
+                </div>
+
+                <!-- Sertifikat 2 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/playIT.jpg') }}" alt="Sertifikat 2"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">3rd Winner Hackthon Software Development Category -
+                        National Competition Play IT</h2>
+                </div>
+
+                <!-- Sertifikat 3 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/kentir.png') }}" alt="Sertifikat 3"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">TIF EXHITION 2024/2025</h2>
+                </div>
+
+                <!-- Sertifikat 4 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/simko.png') }}" alt="Sertifikat 4"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">1st Application - TIF EXHITION 2022/2023</h2>
+                </div>
+
+                <!-- Sertifikat 5 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/bnsp.png') }}" alt="Sertifikat 5"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Junior Web Developer - BNSP 2024</h2>
+                </div>
+
+                <!-- Sertifikat 6 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/Juniaor Web Developer.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Junior Web Developer - VSGA 2024</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- PROJECT SECTION --}}
+    <section class="relative min-h-screen flex flex-col items-center bg-black justify-center px-6 py-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
+        </div>
+        <div class="relative max-w-5xl mx-auto text-center z-10">
+            <h1 id="title"
+                class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
+                Portofolio
+            </h1>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+            <!-- Project 1 -->
+            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+                <img src="project1.jpg" alt="Project 1"
+                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
+                    <h2 class="text-2xl font-bold text-white">Project 1</h2>
+                    <p class="text-gray-300 text-base">Deskripsi tentang project pertama yang muncul saat hover.</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h2 class="text-2xl font-bold text-white">Project 1</h2>
+                    <p class="text-gray-400">Tools: HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+                <img src="project2.jpg" alt="Project 2"
+                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
+                    <h2 class="text-2xl font-bold text-white">Project 2</h2>
+                    <p class="text-gray-300 text-base">Deskripsi tentang project kedua yang muncul saat hover.</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h2 class="text-2xl font-bold text-white">Project 2</h2>
+                    <p class="text-gray-400">Tools: Laravel, Tailwind CSS</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+                <img src="project3.jpg" alt="Project 3"
+                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
+                    <h2 class="text-2xl font-bold text-white">Project 3</h2>
+                    <p class="text-gray-300 text-base">Deskripsi tentang project ketiga yang muncul saat hover.</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h2 class="text-2xl font-bold text-white">Project 3</h2>
+                    <p class="text-gray-400">Tools: Vue.js, Firebase</p>
                 </div>
             </div>
         </div>
