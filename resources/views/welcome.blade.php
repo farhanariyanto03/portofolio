@@ -354,6 +354,38 @@
                         class="w-full h-56 object-cover rounded-lg mb-4">
                     <h2 class="text-lg font-semibold text-white">Junior Web Developer - VSGA 2024</h2>
                 </div>
+
+                <!-- Sertifikat 7 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/DASAR AI DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Dasar AI - DICODING 2024</h2>
+                </div>
+
+                <!-- Sertifikat 8 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/DATA SCIEND DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Data Science - DICODING 2024</h2>
+                </div>
+
+                <!-- Sertifikat 9 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/MAPRO DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Manajemen Proyek - DICODING 2024</h2>
+                </div>
+
+                <!-- Sertifikat 10 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/SQL DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">SQL - DICODING 2024</h2>
+                </div>
             </div>
         </div>
     </section>
