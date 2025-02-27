@@ -448,6 +448,65 @@
             </div>
         </div>
     </section>
+
+    {{-- BLOG SECTION --}}
+    <section class="relative min-h-screen flex flex-col items-center bg-black justify-center px-6 py-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
+        </div>
+        <div class="relative max-w-5xl mx-auto text-center z-10">
+            <h1 id="title"
+                class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
+                Portofolio
+            </h1>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+            <!-- Project 1 -->
+            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+                <img src="project1.jpg" alt="Project 1"
+                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
+                    <h2 class="text-2xl font-bold text-white">Project 1</h2>
+                    <p class="text-gray-300 text-base">Deskripsi tentang project pertama yang muncul saat hover.</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h2 class="text-2xl font-bold text-white">Project 1</h2>
+                    <p class="text-gray-400">Tools: HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+                <img src="project2.jpg" alt="Project 2"
+                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
+                    <h2 class="text-2xl font-bold text-white">Project 2</h2>
+                    <p class="text-gray-300 text-base">Deskripsi tentang project kedua yang muncul saat hover.</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h2 class="text-2xl font-bold text-white">Project 2</h2>
+                    <p class="text-gray-400">Tools: Laravel, Tailwind CSS</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+                <img src="project3.jpg" alt="Project 3"
+                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
+                    <h2 class="text-2xl font-bold text-white">Project 3</h2>
+                    <p class="text-gray-300 text-base">Deskripsi tentang project ketiga yang muncul saat hover.</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h2 class="text-2xl font-bold text-white">Project 3</h2>
+                    <p class="text-gray-400">Tools: Vue.js, Firebase</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
