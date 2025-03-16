@@ -298,46 +298,93 @@
 
     {{-- PENGHARGAAN SECTION --}}
     <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
-        <div class="relative max-w-4xl mx-auto text-center">
-            <h1 class="mb-12 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
-                Achievements
+        <div class="relative max-w-6xl mx-auto text-center z-10">
+            <h1
+                class="mb-12 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300 animate-fade-in">
+                Penghargaan & Sertifikat
             </h1>
 
-            <div class="flex flex-col gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3  space-y-2">
                 <!-- Sertifikat 1 -->
-                <div class="flex flex-col md:flex-row items-center bg-black/60 backdrop-blur-lg border border-gray-600 p-6 rounded-2xl shadow-lg hover:scale-105 transition-all hover:border-blue-400/70 hover:shadow-blue-400/40">
-                    <img src="image/Juara Hackathon UM.jpg" alt="Sertifikat 1" class="w-72 h-56 object-cover rounded-lg">
-                    <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-                        <h2 class="text-xl font-semibold text-white">1st Winner Governance Category - UM SDGs Hackathon 2024</h2>
-                        <p class="text-gray-400 mt-2 text-sm">Lomba nasional yang berfokus pada pengembangan solusi inovatif untuk mencapai tujuan SDGs dengan teknologi.</p>
-                    </div>
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/Juara Hackathon UM.jpg') }}" alt="Sertifikat 1"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">1st Winner Governance Category - UM SDGs Hackathon
+                        National Competition 2024</h2>
                 </div>
 
                 <!-- Sertifikat 2 -->
-                <div class="flex flex-col md:flex-row items-center bg-black/60 backdrop-blur-lg border border-gray-600 p-6 rounded-2xl shadow-lg hover:scale-105 transition-all hover:border-teal-400/70 hover:shadow-teal-400/40">
-                    <img src="image/playIT.jpg" alt="Sertifikat 2" class="w-72 h-56 object-cover rounded-lg">
-                    <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-                        <h2 class="text-xl font-semibold text-white">3rd Winner Hackathon Software Development - Play IT</h2>
-                        <p class="text-gray-400 mt-2 text-sm">Kompetisi nasional dalam bidang pengembangan software dengan tantangan membangun aplikasi inovatif dalam waktu terbatas.</p>
-                    </div>
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/playIT.jpg') }}" alt="Sertifikat 2"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">3rd Winner Hackthon Software Development Category -
+                        National Competition Play IT</h2>
                 </div>
 
                 <!-- Sertifikat 3 -->
-                <div class="flex flex-col md:flex-row items-center bg-black/60 backdrop-blur-lg border border-gray-600 p-6 rounded-2xl shadow-lg hover:scale-105 transition-all hover:border-purple-400/70 hover:shadow-purple-400/40">
-                    <img src="image/kentir.png" alt="Sertifikat 3" class="w-72 h-56 object-cover rounded-lg">
-                    <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-                        <h2 class="text-xl font-semibold text-white">TIF EXHIBITION 2024/2025</h2>
-                        <p class="text-gray-400 mt-2 text-sm">Pameran inovasi teknologi dari mahasiswa Teknik Informatika dengan berbagai karya kreatif dalam bidang IT.</p>
-                    </div>
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/kentir.png') }}" alt="Sertifikat 3"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">TIF EXHITION 2024/2025</h2>
                 </div>
 
                 <!-- Sertifikat 4 -->
-                <div class="flex flex-col md:flex-row items-center bg-black/60 backdrop-blur-lg border border-gray-600 p-6 rounded-2xl shadow-lg hover:scale-105 transition-all hover:border-pink-400/70 hover:shadow-pink-400/40">
-                    <img src="image/simko.png" alt="Sertifikat 4" class="w-72 h-56 object-cover rounded-lg">
-                    <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-                        <h2 class="text-xl font-semibold text-white">1st Application - TIF EXHIBITION 2022/2023</h2>
-                        <p class="text-gray-400 mt-2 text-sm">Penghargaan untuk aplikasi terbaik dalam pameran teknologi yang berfokus pada solusi digital inovatif.</p>
-                    </div>
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/simko.png') }}" alt="Sertifikat 4"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">1st Application - TIF EXHITION 2022/2023</h2>
+                </div>
+
+                <!-- Sertifikat 5 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/bnsp.png') }}" alt="Sertifikat 5"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Junior Web Developer - BNSP 2024</h2>
+                </div>
+
+                <!-- Sertifikat 6 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/Juniaor Web Developer.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Junior Web Developer - VSGA 2024</h2>
+                </div>
+
+                <!-- Sertifikat 7 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/DASAR AI DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Dasar AI - DICODING 2024</h2>
+                </div>
+
+                <!-- Sertifikat 8 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/DATA SCIEND DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Data Science - DICODING 2024</h2>
+                </div>
+
+                <!-- Sertifikat 9 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/MAPRO DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">Manajemen Proyek - DICODING 2024</h2>
+                </div>
+
+                <!-- Sertifikat 10 -->
+                <div
+                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                    <img src="{{ asset('image/SQL DICODING.jpg') }}" alt="Sertifikat 6"
+                        class="w-full h-56 object-cover rounded-lg mb-4">
+                    <h2 class="text-lg font-semibold text-white">SQL - DICODING 2024</h2>
                 </div>
             </div>
         </div>
@@ -463,52 +510,3 @@
 </body>
 
 </html>
-
-
-{{-- <!-- Sertifikat 5 -->
-    <div
-        class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-        <img src="{{ asset('image/bnsp.png') }}" alt="Sertifikat 5"
-            class="w-full h-56 object-cover rounded-lg mb-4">
-        <h2 class="text-lg font-semibold text-white">Junior Web Developer - BNSP 2024</h2>
-    </div>
-
-    <!-- Sertifikat 6 -->
-    <div
-        class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-        <img src="{{ asset('image/Juniaor Web Developer.jpg') }}" alt="Sertifikat 6"
-            class="w-full h-56 object-cover rounded-lg mb-4">
-        <h2 class="text-lg font-semibold text-white">Junior Web Developer - VSGA 2024</h2>
-    </div>
-
-    <!-- Sertifikat 7 -->
-    <div
-        class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-        <img src="{{ asset('image/DASAR AI DICODING.jpg') }}" alt="Sertifikat 6"
-            class="w-full h-56 object-cover rounded-lg mb-4">
-        <h2 class="text-lg font-semibold text-white">Dasar AI - DICODING 2024</h2>
-    </div>
-
-    <!-- Sertifikat 8 -->
-    <div
-        class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-        <img src="{{ asset('image/DATA SCIEND DICODING.jpg') }}" alt="Sertifikat 6"
-            class="w-full h-56 object-cover rounded-lg mb-4">
-        <h2 class="text-lg font-semibold text-white">Data Science - DICODING 2024</h2>
-    </div>
-
-    <!-- Sertifikat 9 -->
-    <div
-        class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-        <img src="{{ asset('image/MAPRO DICODING.jpg') }}" alt="Sertifikat 6"
-            class="w-full h-56 object-cover rounded-lg mb-4">
-        <h2 class="text-lg font-semibold text-white">Manajemen Proyek - DICODING 2024</h2>
-    </div>
-
-    <!-- Sertifikat 10 -->
-    <div
-        class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-        <img src="{{ asset('image/SQL DICODING.jpg') }}" alt="Sertifikat 6"
-            class="w-full h-56 object-cover rounded-lg mb-4">
-        <h2 class="text-lg font-semibold text-white">SQL - DICODING 2024</h2>
-    </div> --}}
