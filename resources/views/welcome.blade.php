@@ -17,40 +17,60 @@
     {{-- NAVBAR --}}
     <nav class="bg-black fixed top-0 left-0 w-full z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex items-center justify-between h-20 px-6">
-            <h1 class="text-white text-lg font-semibold">Farhanayantoo</h1>
+            <!-- Logo -->
+            <h1 class="text-white text-lg font-bold tracking-wider">Farhanayantoo</h1>
 
-            <!-- Menu (Hidden di Mobile) -->
-            <div class="hidden md:flex space-x-5">
-                <a href="#" class="nav-link active text-white">Home</a>
-                <a href="#" class="nav-link text-white">Experience</a>
-                <a href="#" class="nav-link text-white">Portfolio</a>
-            </div>
-
-            <!-- Button -->
-            <div class="hidden md:block">
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
                 <a href="#"
-                    class="text-white bg-gradient-to-r from-blue-600 to-purple-700 px-4 py-2 rounded-full">
-                    Discuss For Project
+                    class="nav-link relative text-white text-sm font-semibold transition-all duration-300
+                                  before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0
+                                  before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300
+                                  hover:before:w-full hover:text-blue-400">
+                    Home
+                </a>
+                <a href="#"
+                    class="nav-link relative text-white text-sm font-semibold transition-all duration-300
+                                  before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0
+                                  before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300
+                                  hover:before:w-full hover:text-blue-400">
+                    Experience
+                </a>
+                <a href="#"
+                    class="nav-link relative text-white text-sm font-semibold transition-all duration-300
+                                  before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0
+                                  before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300
+                                  hover:before:w-full hover:text-blue-400">
+                    Portfolio
                 </a>
             </div>
 
-            <!-- Hamburger Menu (Mobile) -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#" class="cta-button">Discuss For Project</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none relative z-50">
+                <svg id="hamburger-icon" class="w-9 h-9 transition-all duration-300" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="close-icon" class="w-9 h-9 hidden transition-all duration-300"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-black text-white py-4 px-6 space-y-4 shadow-md">
-            <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">Experience</a>
-            <a href="#" class="nav-link">Portfolio</a>
-            <a href="#" class="text-center bg-gradient-to-r from-blue-600 to-purple-700 px-4 py-2 rounded-full">
-                Discuss For Project
-            </a>
+        <div id="mobile-menu"
+            class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80 backdrop-blur-md flex flex-col items-center justify-center space-y-6 transform translate-y-full transition-transform duration-500 ease-in-out z-40">
+            <a href="#" class="mobile-link">Home</a>
+            <a href="#" class="mobile-link">Experience</a>
+            <a href="#" class="mobile-link">Portfolio</a>
+            <a href="#" class="cta-button">Discuss For Project</a>
         </div>
     </nav>
 
@@ -126,7 +146,8 @@
 
     {{-- EXPERIENCE SECTION --}}
     <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
+        </div>
         <!-- SVG Background -->
         <svg width="880" height="293" viewBox="0 0 880 293" fill="none" xmlns="http://www.w3.org/2000/svg"
             class="absolute top-2/3 transform -translate-x-1/2 opacity-70">
@@ -304,88 +325,23 @@
                 Penghargaan & Sertifikat
             </h1>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3  space-y-2">
-                <!-- Sertifikat 1 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/Juara Hackathon UM.jpg') }}" alt="Sertifikat 1"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">1st Winner Governance Category - UM SDGs Hackathon
-                        National Competition 2024</h2>
-                </div>
-
-                <!-- Sertifikat 2 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/playIT.jpg') }}" alt="Sertifikat 2"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">3rd Winner Hackthon Software Development Category -
-                        National Competition Play IT</h2>
-                </div>
-
-                <!-- Sertifikat 3 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/kentir.png') }}" alt="Sertifikat 3"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">TIF EXHITION 2024/2025</h2>
-                </div>
-
-                <!-- Sertifikat 4 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/simko.png') }}" alt="Sertifikat 4"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">1st Application - TIF EXHITION 2022/2023</h2>
-                </div>
-
-                <!-- Sertifikat 5 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/bnsp.png') }}" alt="Sertifikat 5"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">Junior Web Developer - BNSP 2024</h2>
-                </div>
-
-                <!-- Sertifikat 6 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/Juniaor Web Developer.jpg') }}" alt="Sertifikat 6"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">Junior Web Developer - VSGA 2024</h2>
-                </div>
-
-                <!-- Sertifikat 7 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/DASAR AI DICODING.jpg') }}" alt="Sertifikat 6"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">Dasar AI - DICODING 2024</h2>
-                </div>
-
-                <!-- Sertifikat 8 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/DATA SCIEND DICODING.jpg') }}" alt="Sertifikat 6"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">Data Science - DICODING 2024</h2>
-                </div>
-
-                <!-- Sertifikat 9 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/MAPRO DICODING.jpg') }}" alt="Sertifikat 6"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">Manajemen Proyek - DICODING 2024</h2>
-                </div>
-
-                <!-- Sertifikat 10 -->
-                <div
-                    class="bg-black/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                    <img src="{{ asset('image/SQL DICODING.jpg') }}" alt="Sertifikat 6"
-                        class="w-full h-56 object-cover rounded-lg mb-4">
-                    <h2 class="text-lg font-semibold text-white">SQL - DICODING 2024</h2>
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                @foreach ([['image' => 'Juara Hackathon UM.jpg', 'title' => '1st Winner Governance Category - UM SDGs Hackathon National Competition 2024'], ['image' => 'playIT.jpg', 'title' => '3rd Winner Hackthon Software Development Category - National Competition Play IT'], ['image' => 'kentir.png', 'title' => 'TIF EXHITION 2024/2025'], ['image' => 'simko.png', 'title' => '1st Application - TIF EXHITION 2022/2023'], ['image' => 'bnsp.png', 'title' => 'Junior Web Developer - BNSP 2024'], ['image' => 'Juniaor Web Developer.jpg', 'title' => 'Junior Web Developer - VSGA 2024'], ['image' => 'DASAR AI DICODING.jpg', 'title' => 'Dasar AI - DICODING 2024'], ['image' => 'DATA SCIEND DICODING.jpg', 'title' => 'Data Science - DICODING 2024'], ['image' => 'MAPRO DICODING.jpg', 'title' => 'Manajemen Proyek - DICODING 2024'], ['image' => 'SQL DICODING.jpg', 'title' => 'SQL - DICODING 2024']] as $sertifikat)
+                    <div
+                        class="group relative bg-gray-900/80 border border-gray-700 p-6 rounded-xl shadow-lg transition-all hover:scale-105 hover:shadow-2xl">
+                        <div class="overflow-hidden rounded-lg">
+                            <img src="{{ asset('image/' . $sertifikat['image']) }}" alt="{{ $sertifikat['title'] }}"
+                                class="w-full h-60 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <h2
+                            class="mt-4 text-lg font-semibold text-white text-center group-hover:text-teal-300 transition-colors duration-300">
+                            {{ $sertifikat['title'] }}
+                        </h2>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-0 group-hover:opacity-90 transition-opacity duration-500">
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -394,64 +350,68 @@
     <section class="relative min-h-screen flex flex-col items-center bg-black justify-center px-6 py-16">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
         </div>
+
         <div class="relative max-w-5xl mx-auto text-center z-10">
             <h1 id="title"
-                class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
-                Portofolio
+                class="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
+                Portfolio
             </h1>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 mt-8">
-            <!-- Project 1 -->
-            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+        <div class="grid md:grid-cols-3 gap-12 mt-12">
+            <div
+                class="relative group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-lg overflow-hidden w-96 h-[30rem] transition duration-700 hover:shadow-2xl hover:shadow-cyan-500/50">
                 <img src="project1.jpg" alt="Project 1"
-                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                    class="w-full h-64 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
-                    <h2 class="text-2xl font-bold text-white">Project 1</h2>
-                    <p class="text-gray-300 text-base">Deskripsi tentang project pertama yang muncul saat hover.</p>
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-blue-700 via-cyan-600 to-teal-700 bg-opacity-90 p-8">
+                    <h2 class="text-3xl font-bold text-white">Project 1</h2>
+                    <p class="text-gray-300 text-lg text-center">Deskripsi tentang project pertama yang muncul saat
+                        hover.</p>
                 </div>
-                <div class="mt-4 text-center">
-                    <h2 class="text-2xl font-bold text-white">Project 1</h2>
-                    <p class="text-gray-400">Tools: HTML, CSS, JavaScript</p>
+                <div class="mt-6 text-center">
+                    <h2 class="text-2xl font-semibold text-white">Project 1</h2>
+                    <p class="text-gray-400 text-lg">Tools: HTML, CSS, JavaScript</p>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+            <div
+                class="relative group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-lg overflow-hidden w-96 h-[30rem] transition duration-700 hover:shadow-2xl hover:shadow-cyan-500/50">
                 <img src="project2.jpg" alt="Project 2"
-                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                    class="w-full h-64 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
-                    <h2 class="text-2xl font-bold text-white">Project 2</h2>
-                    <p class="text-gray-300 text-base">Deskripsi tentang project kedua yang muncul saat hover.</p>
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-blue-700 via-cyan-600 to-teal-700 bg-opacity-90 p-8">
+                    <h2 class="text-3xl font-bold text-white">Project 2</h2>
+                    <p class="text-gray-300 text-lg text-center">Deskripsi tentang project kedua yang muncul saat
+                        hover.</p>
                 </div>
-                <div class="mt-4 text-center">
-                    <h2 class="text-2xl font-bold text-white">Project 2</h2>
-                    <p class="text-gray-400">Tools: Laravel, Tailwind CSS</p>
+                <div class="mt-6 text-center">
+                    <h2 class="text-2xl font-semibold text-white">Project 2</h2>
+                    <p class="text-gray-400 text-lg">Tools: Laravel, Tailwind CSS</p>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="relative group bg-gray-800 p-8 rounded-xl shadow-2xl overflow-hidden w-96 h-96">
+            <div
+                class="relative group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-lg overflow-hidden w-96 h-[30rem] transition duration-700 hover:shadow-2xl hover:shadow-cyan-500/50">
                 <img src="project3.jpg" alt="Project 3"
-                    class="w-full h-56 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
+                    class="w-full h-64 object-cover rounded-lg group-hover:opacity-30 transition duration-700">
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-indigo-800 via-purple-700 to-indigo-900 bg-opacity-80 p-6">
-                    <h2 class="text-2xl font-bold text-white">Project 3</h2>
-                    <p class="text-gray-300 text-base">Deskripsi tentang project ketiga yang muncul saat hover.</p>
+                    class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-blue-700 via-cyan-600 to-teal-700 bg-opacity-90 p-8">
+                    <h2 class="text-3xl font-bold text-white">Project 3</h2>
+                    <p class="text-gray-300 text-lg text-center">Deskripsi tentang project ketiga yang muncul saat
+                        hover.</p>
                 </div>
-                <div class="mt-4 text-center">
-                    <h2 class="text-2xl font-bold text-white">Project 3</h2>
-                    <p class="text-gray-400">Tools: Vue.js, Firebase</p>
+                <div class="mt-6 text-center">
+                    <h2 class="text-2xl font-semibold text-white">Project 3</h2>
+                    <p class="text-gray-400 text-lg">Tools: Vue.js, Firebase</p>
                 </div>
             </div>
         </div>
     </section>
+    {{-- PROJECT SECTION --}}
 
     {{-- BLOG SECTION --}}
     <section class="relative min-h-screen flex flex-col items-center bg-black justify-center px-6 py-16">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
         </div>
         <div class="relative max-w-5xl mx-auto text-center z-10">
             <h1 id="title"

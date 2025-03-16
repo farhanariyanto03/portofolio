@@ -33,9 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById("menu-btn").addEventListener("click", function () {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const closeIcon = document.getElementById("close-icon");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("translate-y-full");
+    mobileMenu.classList.toggle("translate-y-0");
+
+    // Ganti ikon antara hamburger dan close
+    hamburgerIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
 });
 
 document.addEventListener("DOMContentLoaded", function () {
