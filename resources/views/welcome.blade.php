@@ -22,24 +22,24 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <a href="#"
+                <a href="home"
                     class="nav-link relative text-white text-sm font-semibold transition-all duration-300
                                   before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0
-                                  before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300
+                                  before:h-[4px] before:bg-blue-500 before:transition-all before:duration-300
                                   hover:before:w-full hover:text-blue-400">
                     Home
                 </a>
-                <a href="#"
+                <a href="#experience"
                     class="nav-link relative text-white text-sm font-semibold transition-all duration-300
                                   before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0
-                                  before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300
+                                  before:h-[4px] before:bg-blue-500 before:transition-all before:duration-300
                                   hover:before:w-full hover:text-blue-400">
                     Experience
                 </a>
-                <a href="#"
+                <a href="#portofolio"
                     class="nav-link relative text-white text-sm font-semibold transition-all duration-300
                                   before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0
-                                  before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300
+                                  before:h-[4px] before:bg-blue-500 before:transition-all before:duration-300
                                   hover:before:w-full hover:text-blue-400">
                     Portfolio
                 </a>
@@ -75,7 +75,7 @@
     </nav>
 
     {{-- HOME SECTION --}}
-    <section class="relative bg-black min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative bg-black min-h-screen flex items-center justify-center overflow-hidden">
         <!-- SVG Background -->
         <div class="absolute inset-0 flex justify-center items-center overflow-hidden">
             <svg width="880" height="293" viewBox="0 0 880 293" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@
     </section>
 
     {{-- EXPERIENCE SECTION --}}
-    <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
+    <section id="experience" class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
         </div>
         <!-- SVG Background -->
@@ -318,11 +318,11 @@
     </section>
 
     {{-- PENGHARGAAN SECTION --}}
-    <section class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
+    <section id="penghargaan" class="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 py-16">
         <div class="relative max-w-6xl mx-auto text-center z-10">
             <h1
                 class="mb-12 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300 animate-fade-in">
-                Penghargaan & Sertifikat
+                Awards & Certificates
             </h1>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -347,7 +347,7 @@
     </section>
 
     {{-- PROJECT SECTION --}}
-    <section class="relative min-h-screen flex flex-col items-center bg-black justify-center px-6 py-16">
+    <section id="portofolio" class="relative min-h-screen flex flex-col items-center bg-black justify-center px-6 py-16">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-teal-900 to-gray-900 opacity-50 blur-3xl">
         </div>
 
