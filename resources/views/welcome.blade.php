@@ -213,7 +213,7 @@
                                 </h3>
                                 <p class="text-gray-400 group-hover:text-gray-200">JTI Inovation (2024 - Now)</p>
                                 <p class="mt-2 text-gray-300 text-sm group-hover:text-gray-100">
-                                    Membangun website E-Learning untuk sebuah kampus sebagai media pembelajaran
+                                    Membangun website E-Learning/LMS untuk sebuah kampus sebagai media pembelajaran
                                 </p>
                             </div>
                         </div>
